@@ -1,4 +1,4 @@
-# 32-BIT_ALU Simulation and Synthesis
+<img width="1903" height="1022" alt="image" src="https://github.com/user-attachments/assets/04971725-5d5c-443a-9abf-6284e25f7794" /># 32-BIT_ALU Simulation and Synthesis
 
 ## Aim:
 Write a Verilog code for a 32-bit ALU supporting four logical and four arithmetic operations. Use case statements in behavioural modelling.
@@ -30,9 +30,27 @@ A Blank Document opens up into which the following source code can be typed.
 #### a)	To verify the Functionality using the Test Bench
 
 ## Source Code – Using Case Statement :
-
-(Include program here)
-
+```
+module alu_32bit_case(y,a,b,f);
+input [31:0]a;
+input [31:0]b;
+input [2:0]f;
+output reg [31:0]y;
+always@(*)
+begin
+case(f)
+3'b000:y=a&b; 
+3'b001:y=a|b; 
+3'b010:y=~(a&b); 
+3'b011:y=~(a|b); 
+3'b100:y=a^b; 
+3'b101:y=~(a^b); 
+3'b110:y=~a; 
+3'b111:y=~b; 
+endcase
+end
+endmodule
+```
 Use the Save option or Ctrl+S to save the code, or click on the save option from the top-right corner and close the text file.
 
 ## Creating a Test Bench:
@@ -40,9 +58,29 @@ Use the Save option or Ctrl+S to save the code, or click on the save option from
 Similarly, create your test bench using gedit <filename_tb>.v to open a new blank document (alu_32bit_tb_case).
 
 ## Test Bench :
-
-(Include test bench program here)
-
+```
+module alu_32bit_tb_case;
+reg [31:0]a;
+reg [31:0]b;
+reg [2:0]f;
+wire [31:0]y;
+alu_32bit_case dut(.y(y),.a(a),.b(b),.f(f));
+initial
+begin
+a=32'h00000000;
+b=32'h10101010;
+#10 f=3'b000;
+#10 f=3'b001;
+#10 f=3'b010;
+#10 f=3'b011;
+#10 f=3'b100;
+#10 f=3'b101;
+#10 f=3'b110;
+#10 f=3'b111;
+#100 $finish;
+end
+endmodule
+```
 Use the Save option or Ctrl+S to save the code, or click on the save option from the top-right corner and close the text file.
 
 ## Functional Simulation:
@@ -56,6 +94,7 @@ source /cadence/install/cshrc (mention the path of the tools)
 (The path of cshrc could vary depending on the installation destination)
 
 After this, you can see the window like below
+<img width="1919" height="1079" alt="Screenshot 2025-10-25 084350" src="https://github.com/user-attachments/assets/6dad8f95-ec97-4ad5-bddb-e6f1fce3da0d" />
 
 #### Fig 2: Invoke the Cadence Environment
 
@@ -68,12 +107,14 @@ or
 •linux:/> nclaunch& // On subsequent calls to NCVERILOG
 
 It will invoke the nclaunch window for functional simulation. We can compile, elaborate and simulate it using Multiple Steps.
+<img width="1121" height="664" alt="image" src="https://github.com/user-attachments/assets/1544d3cb-b19f-43e5-a189-68243bc53371" />
 
 #### Fig 3: Setting Multi-step simulation
 
 Select Multiple Step and then select “Create cds.lib File” as shown in the figure below
 
 Click the .cds.lib file and save the file by clicking on the Save option
+<img width="1906" height="1029" alt="image" src="https://github.com/user-attachments/assets/140f3d81-ff64-4908-abdc-547d935a9c75" />
 
 #### Fig 4:cds.lib file Creation
 Save .lib file and select the correct option for cds.lib file format based on the HDL Language and Libraries used.
@@ -83,6 +124,7 @@ Select “Don’t include any libraries (verilog design)” from “New cds.lib 
 We are simulating a verilog design without using any libraries
 
 Click “OK” in the “nclaunch: Open Design Directory” window, as shown in the figure below
+<img width="1903" height="1022" alt="image" src="https://github.com/user-attachments/assets/c5981eb2-1d08-44a8-b7a6-09db58ca423e" />
  
 #### Fig 5: Selection of Don’t include any libraries
 An ‘NCLaunch window’ appears as shown in the figure below
@@ -92,8 +134,10 @@ Left side, you can see the HDL files. The right side of the window has Worklib a
 Worklib is the directory where all the compiled codes are stored, while Snapshot will have the output of elaboration, which in turn goes for simulation.
 
 To perform the function simulation, the following three steps are involved: Compilation, Elaboration and Simulation.
+<img width="1906" height="1041" alt="image" src="https://github.com/user-attachments/assets/318ed535-5343-4d91-aa26-82b2282c6f41" />
 
 #### Fig 6: Nclaunch Window
+<img width="1919" height="1078" alt="Screenshot 2025-10-25 083357" src="https://github.com/user-attachments/assets/fe001d2d-e28e-4acf-abfe-7e8467b44f0d" />
 
 ### Step 1: Compilation:
 – Process to check the correct Verilog language syntax and usage
