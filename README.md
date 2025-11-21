@@ -1,5 +1,3 @@
-# 32-BIT_ALU Simulation and Synthesis
-
 ## Aim:
 Write a Verilog code for a 32-bit ALU supporting four logical and four arithmetic operations. Use case statements in behavioural modelling.
 To verify functionality using the Test Bench, synthesize and analyse area and Power reports of a 32 Bit ALU design 
@@ -15,6 +13,7 @@ The ALU will take in two 32-bit values and a control line. An Arithmetic unit do
 <img width="668" height="344" alt="image" src="https://github.com/user-attachments/assets/1195efe3-e2dd-443c-8bf0-be1579c06533" />
 
 #### Fig 1: Block Diagram of 32 Bit ALU
+<img width="1920" height="1200" alt="Screenshot 2025-11-21 172555" src="https://github.com/user-attachments/assets/2fb216ff-04c2-4a85-903c-dd8e45481ae9" />
 
 ## Creating a Workspace:
 
@@ -68,6 +67,7 @@ or
 •linux:/> nclaunch& // On subsequent calls to NCVERILOG
 
 It will invoke the nclaunch window for functional simulation. We can compile, elaborate and simulate it using Multiple Steps.
+<img width="1919" height="1199" alt="Screenshot 2025-11-21 172755" src="https://github.com/user-attachments/assets/500a00f0-34c2-4ace-a41b-cb7c52b0e8b8" />
 
 #### Fig 3: Setting Multi-step simulation
 
@@ -83,7 +83,8 @@ Select “Don’t include any libraries (verilog design)” from “New cds.lib 
 We are simulating a verilog design without using any libraries
 
 Click “OK” in the “nclaunch: Open Design Directory” window, as shown in the figure below
- 
+ <img width="1920" height="1200" alt="Screenshot 2025-11-21 173158" src="https://github.com/user-attachments/assets/c86903e5-4286-4bd6-8df8-f2ff8c149e91" />
+
 #### Fig 5: Selection of Don’t include any libraries
 An ‘NCLaunch window’ appears as shown in the figure below
 
@@ -94,6 +95,7 @@ Worklib is the directory where all the compiled codes are stored, while Snapshot
 To perform the function simulation, the following three steps are involved: Compilation, Elaboration and Simulation.
 
 #### Fig 6: Nclaunch Window
+<img width="1920" height="1200" alt="Screenshot 2025-11-21 173249" src="https://github.com/user-attachments/assets/e47e0c0c-35af-456f-a589-7a713319fd08" />
 
 ### Step 1: Compilation:
 – Process to check the correct Verilog language syntax and usage
@@ -115,6 +117,8 @@ Left side select the file and in Tools: launch verilog compiler with current sel
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
 
 #### Fig 7: Compiled database in WorkLib
+<img width="1920" height="1200" alt="Screenshot 2025-11-21 174550" src="https://github.com/user-attachments/assets/360372c6-f9ea-4661-a7a5-1cbc67b5d251" />
+
 After compilation, it will come under worklib. You can see on the right side window
 
 select the test bench and compile it. It will come under Worklib. Under Worklib, you can see the module and test bench.
@@ -144,6 +148,7 @@ Outputs: Elaborate database updated in the mapped library if successful, generat
 After elaboration, the file will come under snapshot. Select the test bench and simulate it.
 
 #### Fig 8: Elaboration Launch Option
+<img width="1920" height="1200" alt="Screenshot 2025-11-21 174714" src="https://github.com/user-attachments/assets/63f99bf8-4f2f-45a1-8ea3-7ae4bc3fc61f" />
 
 ### Step 3: Simulation:
 – Simulate with the given test vectors over a period of time to observe the output behaviour.
@@ -157,8 +162,10 @@ Simulations allow dumping design and test bench signals into a waveform
 Steps for simulation – Run the simulation command with simulator options
 
 #### Fig 9: Design Browser window for simulation
+<img width="1920" height="1200" alt="Screenshot 2025-11-21 174714" src="https://github.com/user-attachments/assets/b8190f96-f95f-4ffb-9a8d-8eeafbdfd617" />
 
 #### Fig 10: Simulation Waveform Window
+<img width="1280" height="702" alt="image" src="https://github.com/user-attachments/assets/6d52189d-660a-48cc-bec1-3c8182c78dd3" />
 
 Synthesis requires three files as follows,
 
@@ -176,10 +183,13 @@ The Liberty files are present in the library path,
 • Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist. Or use source run.tcl command in the terminal window to view the netlist, and a log file will be created in the working folder.
 
 #### Fig 11: Synthesis RTL Schematic 
+<img width="1280" height="698" alt="image" src="https://github.com/user-attachments/assets/bb925522-854b-4ffb-997e-e86cb67ee1a2" />
 
 #### Fig 12: Area report
+<img width="1909" height="1101" alt="Screenshot 2025-11-21 171808" src="https://github.com/user-attachments/assets/ac0e33ae-a08f-4b21-a556-7d14324d60dd" />
 
 #### Fig 13: Power Report
+<img width="1919" height="1199" alt="Screenshot 2025-11-21 172208" src="https://github.com/user-attachments/assets/f9a40c69-a0e1-422e-80a9-700c94b51692" />
 
 ## Result
 The functionality of the 32-bit ALU was successfully verified using a test bench and simulated with the nclaunch tool. Additionally, the generic netlist of the 32-bit ALU was generated, and the corresponding area and power reports were analyzed and tabulated using Cadence Genus.
