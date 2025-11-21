@@ -1,5 +1,3 @@
-# 32-BIT_ALU Simulation and Synthesis
-
 ## Aim:
 Write a Verilog code for a 32-bit ALU supporting four logical and four arithmetic operations. Use case statements in behavioural modelling.
 To verify functionality using the Test Bench, synthesize and analyse area and Power reports of a 32 Bit ALU design 
@@ -15,6 +13,7 @@ The ALU will take in two 32-bit values and a control line. An Arithmetic unit do
 <img width="668" height="344" alt="image" src="https://github.com/user-attachments/assets/1195efe3-e2dd-443c-8bf0-be1579c06533" />
 
 #### Fig 1: Block Diagram of 32 Bit ALU
+<img width="1920" height="1200" alt="Screenshot 2025-11-21 172555" src="https://github.com/user-attachments/assets/2fb216ff-04c2-4a85-903c-dd8e45481ae9" />
 
 ## Creating a Workspace:
 
@@ -68,6 +67,7 @@ or
 •linux:/> nclaunch& // On subsequent calls to NCVERILOG
 
 It will invoke the nclaunch window for functional simulation. We can compile, elaborate and simulate it using Multiple Steps.
+<img width="1919" height="1199" alt="Screenshot 2025-11-21 172755" src="https://github.com/user-attachments/assets/500a00f0-34c2-4ace-a41b-cb7c52b0e8b8" />
 
 #### Fig 3: Setting Multi-step simulation
 
@@ -83,7 +83,8 @@ Select “Don’t include any libraries (verilog design)” from “New cds.lib 
 We are simulating a verilog design without using any libraries
 
 Click “OK” in the “nclaunch: Open Design Directory” window, as shown in the figure below
- 
+ <img width="1920" height="1200" alt="Screenshot 2025-11-21 173158" src="https://github.com/user-attachments/assets/c86903e5-4286-4bd6-8df8-f2ff8c149e91" />
+
 #### Fig 5: Selection of Don’t include any libraries
 An ‘NCLaunch window’ appears as shown in the figure below
 
@@ -94,6 +95,7 @@ Worklib is the directory where all the compiled codes are stored, while Snapshot
 To perform the function simulation, the following three steps are involved: Compilation, Elaboration and Simulation.
 
 #### Fig 6: Nclaunch Window
+<img width="1920" height="1200" alt="Screenshot 2025-11-21 173249" src="https://github.com/user-attachments/assets/e47e0c0c-35af-456f-a589-7a713319fd08" />
 
 ### Step 1: Compilation:
 – Process to check the correct Verilog language syntax and usage
@@ -176,10 +178,13 @@ The Liberty files are present in the library path,
 • Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist. Or use source run.tcl command in the terminal window to view the netlist, and a log file will be created in the working folder.
 
 #### Fig 11: Synthesis RTL Schematic 
+<img width="1280" height="698" alt="image" src="https://github.com/user-attachments/assets/bb925522-854b-4ffb-997e-e86cb67ee1a2" />
 
 #### Fig 12: Area report
+<img width="1909" height="1101" alt="Screenshot 2025-11-21 171808" src="https://github.com/user-attachments/assets/ac0e33ae-a08f-4b21-a556-7d14324d60dd" />
 
 #### Fig 13: Power Report
+<img width="1919" height="1199" alt="Screenshot 2025-11-21 172208" src="https://github.com/user-attachments/assets/f9a40c69-a0e1-422e-80a9-700c94b51692" />
 
 ## Result
 The functionality of the 32-bit ALU was successfully verified using a test bench and simulated with the nclaunch tool. Additionally, the generic netlist of the 32-bit ALU was generated, and the corresponding area and power reports were analyzed and tabulated using Cadence Genus.
