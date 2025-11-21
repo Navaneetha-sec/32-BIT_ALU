@@ -117,6 +117,8 @@ Left side select the file and in Tools: launch verilog compiler with current sel
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
 
 #### Fig 7: Compiled database in WorkLib
+<img width="1920" height="1200" alt="Screenshot 2025-11-21 174550" src="https://github.com/user-attachments/assets/360372c6-f9ea-4661-a7a5-1cbc67b5d251" />
+
 After compilation, it will come under worklib. You can see on the right side window
 
 select the test bench and compile it. It will come under Worklib. Under Worklib, you can see the module and test bench.
@@ -146,6 +148,7 @@ Outputs: Elaborate database updated in the mapped library if successful, generat
 After elaboration, the file will come under snapshot. Select the test bench and simulate it.
 
 #### Fig 8: Elaboration Launch Option
+<img width="1920" height="1200" alt="Screenshot 2025-11-21 174714" src="https://github.com/user-attachments/assets/63f99bf8-4f2f-45a1-8ea3-7ae4bc3fc61f" />
 
 ### Step 3: Simulation:
 – Simulate with the given test vectors over a period of time to observe the output behaviour.
@@ -159,8 +162,10 @@ Simulations allow dumping design and test bench signals into a waveform
 Steps for simulation – Run the simulation command with simulator options
 
 #### Fig 9: Design Browser window for simulation
+<img width="1920" height="1200" alt="Screenshot 2025-11-21 174714" src="https://github.com/user-attachments/assets/b8190f96-f95f-4ffb-9a8d-8eeafbdfd617" />
 
 #### Fig 10: Simulation Waveform Window
+<img width="1280" height="702" alt="image" src="https://github.com/user-attachments/assets/6d52189d-660a-48cc-bec1-3c8182c78dd3" />
 
 Synthesis requires three files as follows,
 
